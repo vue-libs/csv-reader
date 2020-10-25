@@ -1,17 +1,24 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <CsvUpload @tableData="items = $event"></CsvUpload>
+    <TabularData :items="items"></TabularData>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import CsvUpload from './components/CsvUpload'
+import TabularData from './components/TabularData'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CsvUpload,
+    TabularData
+  },
+  data() {
+    return{
+      items: []
+    }
   }
 }
 </script>
@@ -25,4 +32,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+@import "~bootstrap/dist/css/bootstrap.css"
 </style>
