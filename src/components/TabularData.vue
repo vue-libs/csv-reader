@@ -8,12 +8,12 @@
 <script>
 import { BTable } from "bootstrap-vue";
 export default {
-  name: 'TabularData',
-  props: ['items'],
+  name: "TabularData",
+  props: ["items"],
   components: {
-      BTable
+    BTable,
   },
-}
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
